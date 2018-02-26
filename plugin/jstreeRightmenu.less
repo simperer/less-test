@@ -1,0 +1,35 @@
+/* jstreeRightmenu @{theme-name} css */
+.@{theme-name} .jstree .right-menu {
+
+	.ygmat-ellipsis-v {
+		color: @nestable-action-btn-color;
+
+		&:hover {
+			color: @nestable-action-btn-hover-color;
+		}
+	}
+	&.jstree-rightmenu-clicked .ygmat-ellipsis-v {
+		color: @nestable-selected-action-btn-color;
+
+		&:hover {
+			color: @nestable-selected-action-btn-hover-color;
+		}
+	}
+	.dropdown {
+		background-color: @dropdown-bg;
+		box-shadow: @dropdown-shadow;
+		
+		&:after {
+			border-color: transparent transparent @dropdown-arrow-color transparent;
+		}
+		li {
+			//color: #575a64;
+
+			&:hover {
+				color: @dropdown-item-hover-color;
+				background-color: @dropdown-item-hover-bg;
+			}
+		}
+	}
+} 
+

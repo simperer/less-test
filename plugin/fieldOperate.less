@@ -1,0 +1,38 @@
+/* fieldOperate theme css */
+.@{theme-name} .fieldOperate {
+    .bg-block {
+        .box-shadow();
+        //background-color: #FFF;
+        //box-shadow: 0 0 6px 0 rgba(0,0,0,.06), 0 10px 12px 0 rgba(118,153,222,.1);
+    }
+    .block-shadow-right {
+        box-shadow: 1px 0 0 0 @border-color-base;
+    }
+    .function-list,
+    .new-field .field-list {
+        li:hover {
+            background: @dropdown-item-hover-bg;
+        }             
+    }
+    .function-list {
+        .func-tip {
+            //background: #FFF;
+            //box-shadow: 0 0 10px 0 rgba(0,0,0,.12), 0 10px 12px 0 rgba(118,153,222,.1);
+            .box-shadow();
+            color: @text-color;
+
+            .func-tip-arrow {
+                border-left: 6px solid @box-bg;
+            }
+            .key {
+                color: fadeout(@text-color,30%);
+            }
+        }
+    }
+    .CodeMirror {
+        color: @text-color;
+        background: @textarea-bg;
+        box-shadow: @textarea-shadow;
+    }
+}
+

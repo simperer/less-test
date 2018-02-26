@@ -1,0 +1,31 @@
+/* global-filter @{theme-name} css */
+.@{theme-name} .global-filter-container {
+    .bg-block {
+        .box-shadow();
+    }
+    .block-shadow-left {
+        box-shadow: -1px 0 0 0 @border-color-base;
+    }
+    .side li {
+        >.tree-handle {
+            &.active,
+            &:hover {
+                background-color: @box-bg;
+
+                .menu-name {
+                    color: @base-color;
+                }
+            }
+        }
+        .operate {
+            //background-color: #FFF;
+        }
+    }
+    .global-filter-info .split {
+        box-shadow: inset 0 -1px 0 0 @border-color-split;
+    }
+    .filter-config .default {
+        box-shadow: 0 -1px 1px @shadow-color;
+    }
+}
+

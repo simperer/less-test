@@ -1,0 +1,53 @@
+/* fullscreen @{theme-name} css */
+.@{theme-name} .fullscreen-modal {
+    background-color: @box-bg !important;
+
+    .control-pane {
+        background-color: @box-bg;
+    }
+    .nav {
+        background-color: @table-thead-bg;
+
+        .chart-type li {
+
+            i {
+                color: @fullscreen-nav-icon-color;
+            }
+            .content-table {
+                color: fadeout(@text-color,30%);
+            }
+            &.active {
+                background-color: @box-bg;
+
+                i {
+                    color: @base-color;
+                }
+                .content-table {
+                    color: @base-color;
+                }
+            }
+            
+        }
+    }
+    .fs-chart-description {
+        border-left: 1px solid @border-color-split;
+        color: fadeout(@text-color,30%);
+
+        .hd {
+            color: @base-color;
+        }
+    }
+    .gridster-item {
+        &,
+        &:hover {
+            background-color: transparent;
+            box-shadow: none;
+        }
+    }
+    .more-action li:hover, 
+    .more-action li.active .text {
+        //color: rgba(0,0,0,.82);
+    }
+
+}
+

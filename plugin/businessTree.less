@@ -1,0 +1,45 @@
+/* businessTree @{theme-name} css */
+.@{theme-name} .businessTree {
+	background-color: @businessTree-bg;
+
+	.main-list>li {
+		border-bottom: 1px solid @businessTree-open-bg;
+	
+		&.open {
+			background-color: @businessTree-open-bg;
+		}
+		>p {
+
+			>.expand {
+				color: @businessTree-expand-icon-color;
+			}
+			>i {
+				color: @businessTree-icon-color;
+			}
+			.folder-item-name {
+				color: @businessTree-name-color;
+			}
+			&:hover {
+				background: @businessTree-hover-bg;
+
+				>i {
+					//color: @businessTree-hover-icon-color;
+				}
+				.folder-item-name {
+					//color: @businessTree-hover-name-color;
+				}
+			}
+			&.active {
+				background: @businessTree-selected-bg;
+
+				>i {
+					color: @businessTree-selected-icon-color;
+				}
+				.folder-item-name {
+					color: @businessTree-selected-name-color;
+				}
+			}
+		}
+	}
+}
+

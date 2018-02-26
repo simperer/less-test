@@ -1,0 +1,68 @@
+@dropdown-prefix-cls: ~"@{css-prefix}dropdown";
+@dropdown-item-prefix-cls: ~"@{dropdown-prefix-cls}-item";
+
+.@{theme-name} .dropdown-wrap,
+.@{theme-name} .dropdown-menu,
+.@{theme-name} .@{dropdown-prefix-cls} {
+    background-color: @dropdown-bg;
+    box-shadow: @dropdown-shadow;
+
+    &.arrow:after {
+        border-bottom-color: @dropdown-arrow-color;
+    }
+    .arrow {
+        border-bottom-color: @dropdown-arrow-outer-color;
+
+        &:after {
+            border-bottom-color: @dropdown-arrow-color;
+        }
+    }
+    >li,
+    .dropdown-item,
+    .@{dropdown-item-prefix-cls} {
+
+        &:hover {
+
+            >a {
+                color: @dropdown-item-hover-color;
+                background-color: @dropdown-item-hover-bg;
+            }
+        }
+        &.active {
+            &,
+            &:hover,
+            &:focus {
+                
+                >a {
+                    color: @dropdown-item-active-color;
+                    background-color: inherit;
+                }
+            }
+        }
+        &.disabled {
+            &,
+            &:hover,
+            &:focus {
+                cursor: @cursor-disabled;
+                
+                >a {
+                    color: @dropdown-item-disabled-color;
+                }
+            }
+        }
+        >a {
+            color: @text-color;
+        }
+    }
+
+}
+.@{theme-name} .dropdown-submenu {
+
+    > a:after {
+        border-left-color: @border-color-base;
+    }
+    &:hover > a:after {
+        border-left-color: #fff;
+    }
+}
+

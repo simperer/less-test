@@ -1,0 +1,25 @@
+/* verificationSlider theme-name css */
+.@{theme-name} .verification-slider {
+
+	.slide-bar {
+		border: 1px solid @border-color-base;
+	}
+	.slide-area.opacity .slide-bar {
+		border: 1px solid fadeout(@border-color-base,50%);
+	}
+	.slide-progress {
+		border: 1px solid @base-color;
+
+		&.success {
+			background-color: fadeout(@base-color,50%);
+		}
+	}
+	.slide-thumb {
+		background-color: @base-color;
+		color: #fff;
+	}
+	.hint {
+		color: #bbb;
+	}
+} 
+

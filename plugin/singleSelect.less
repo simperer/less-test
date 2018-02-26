@@ -1,0 +1,24 @@
+/* singleSelect theme css */
+.@{theme-name} .singleSelect {
+
+    .query-box .query-text {
+        //color: #fff;
+
+        & + a {
+            color: @theme-lighter;
+        }
+    }
+    .single-container .single-list .folder-item {
+        //color: #fff;
+
+        >p:hover,
+        >p.active {
+            color: @jstree-sidebar-click-color;
+            background: @jstree-sidebar-click-bg;
+        }
+        >p.active i {
+            color: @jstree-sidebar-click-icon-color;
+        }
+    }
+} 
+

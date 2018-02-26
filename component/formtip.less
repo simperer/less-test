@@ -1,0 +1,104 @@
+/**
+ * @description: formtip 输入框错误提示
+ * @update: 2017-09-05
+ */
+
+
+/** 输入框错误提示公用样式 start*/
+.formtip {
+    position: absolute;
+    z-index: 1030;
+    display: none;
+    line-height: 1.4;
+    opacity: 0;
+    filter: alpha(opacity=0);
+}
+.error .formtip,
+.warn .formtip {
+    display: block;
+}
+.info .formtip {
+    display: block;
+}
+.tipin {
+    opacity: 0.95;
+    filter: alpha(opacity=95);
+}
+.tiptop {
+    padding-bottom: 5px;
+    top: -29px;
+    right: 0;
+}
+.tipbottom {
+    padding-top: 5px;
+    bottom: -29px;
+    right: 0;
+}
+.formtip-inner {
+    padding: 4px 8px;
+    color: #ffffff;
+    text-align: center;
+    text-decoration: none;
+    background: #333333;
+    border-radius: 4px;
+    font-size: 12px;
+    text-shadow: 1px 1px 0 rgba(42, 45, 50, 0.5);
+}
+.formtip-arrow {
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-color: transparent;
+    border-style: solid;
+}
+.tiptop .formtip-arrow {
+    bottom: 0;
+    left: 80%;
+    margin-left: -5px;
+    border-top-color: #333333;
+    border-width: 5px 5px 0;
+}
+.tipbottom .formtip-arrow {
+    top: -5px;
+    left: 80%;
+    margin-left: -5px;
+    border-bottom-color: #333333;
+    border-width: 5px 5px 5px;
+}
+/** 错误 */
+.error .formtip .formtip-inner {
+    color: #ffffff;
+    background: #c94d32;
+    text-shadow: 1px 1px 0 rgba(100, 60, 20, 0.3);
+}
+.error .tiptop .formtip-arrow {
+    border-top-color: #c94d32;
+}
+.error .tipbottom .formtip-arrow {
+    border-bottom-color: #c94d32;
+}
+/** 警示 */
+.warn .formtip .formtip-inner {
+    color: #ffffff;
+    background: #ff8000;
+    text-shadow: 1px 1px 0 rgba(100, 66, 6, 0.3);
+}
+.warn .tiptop .formtip-arrow {
+    border-top-color: #ff8000;
+}
+.warn .tipbottom .formtip-arrow {
+    border-bottom-color: #ff8000;
+}
+/** 普通信息提示样式 */
+.info .formtip .formtip-inner {
+    color: #ffffff;
+    background: #4f99c6;
+    text-shadow: 1px 1px 0 rgba(53, 81, 98, 0.3);
+}
+.info .tiptop .formtip-arrow {
+    border-top-color: #4f99c6;
+}
+.info .tipbottom .formtip-arrow {
+    border-bottom-color: #4f99c6;
+}
+/** 输入框错误提示公用样式 end*/

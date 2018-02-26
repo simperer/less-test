@@ -1,0 +1,37 @@
+/* publishSelect theme css */
+.@{theme-name} .publish-select-container {
+
+    .selected-container-tab {
+        background-color: @table-thead-bg; //darken(@bg-base,3%);
+    }
+    input.search-text+i {
+        color: @base-color;
+    }
+    .selected-container-tab,
+    .display-total  {
+        color: fadeout(@base-color,30%);
+    }
+    .selected-container{
+        border:1px solid @border-color-base;
+    }
+    .select-filter-tree {
+        //background-color: #fff;
+        border: 1px solid @border-color-base;
+    }
+    .ztree li.data-more,
+    .ztree .node-remove {
+        color: @base-color;
+    }
+    .select-info{
+        background-color: @publishSelect-select-info-bg;
+        a {
+            color: @base-color;
+
+            &:hover,
+            &:focus {
+                color: fadeout(@base-color,30%);
+            }
+        }
+
+    }
+} 

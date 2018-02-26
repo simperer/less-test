@@ -1,0 +1,101 @@
+@step-prefix-cls: ~"@{css-prefix}step";
+
+.@{step-prefix-cls} {
+    padding: 24px 0;
+    text-align: center;
+    position: relative;
+    height: 115px;
+
+    .line-bg {
+        width: 100%;
+        height: 1px;
+        position: absolute;
+        top: 44px;
+        left: 0;
+
+        .progress-line {
+            width: 50%;
+            height: 1px;
+            //background-color: #0cb1a1;
+        }
+    }
+
+    ul {
+        display: inline-block;
+        position: relative;
+        z-index: 2;
+
+        li {
+            float: left;
+            width: 60px;
+            text-align: center;
+
+            & + li {
+                margin-left: 96px;
+            }
+            .circle-bg {
+                display: inline-block;
+                width: 40px;
+                height: 40px;
+                line-height: 40px;
+                margin-bottom: 10px;
+                font-size: 20px;
+                font-weight: 600;
+                background-repeat: no-repeat;
+            }
+            &.done .circle-bg {
+                background-position: 0 center;
+            }
+            &.active .circle-bg {
+                background-position: -60px center;
+            }
+            &.undone .circle-bg {
+                background-position: -120px center;
+            }
+        }
+    }
+}
+
+.@{theme-name} .@{step-prefix-cls} {
+    .line-bg {
+        background-color: @step-line-bg;
+
+        .progress-line {
+            background-color: @step-line-color;
+        }
+    }
+    ul li {
+        .circle-bg {
+            background-color: @step-circle-bg;
+            background-image: url("@{img-path}@{step-img-name}.png");
+        }
+        &.active {
+            .circle-bg {
+                color: @step-active-num-color;
+            }
+            p {
+                color: @step-active-title-color;
+            }
+        }
+        &.undone {
+            .circle-bg {
+                color: @step-undone-num-color;
+            }
+            p {
+                color: @step-undone-title-color;
+            }
+        }
+        &.done {
+            .circle-bg {
+                color: @step-done-num-color;
+            }
+            p{
+                color: @step-done-title-color;
+            }
+        }
+    }
+} 
+
+
+
+

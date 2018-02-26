@@ -1,0 +1,61 @@
+@table-prefix-cls: ~"@{css-prefix}table";
+
+
+.@{theme-name} .@{table-prefix-cls} {
+    &-normal {
+        color: @table-color;
+
+        thead {
+            //border: 1px solid #eceff1;
+            th {
+                background-color: @table-thead-bg;
+                border-bottom: 2px solid @table-thead-border-bottom-color;
+            
+                & + th {
+                    border-left: 1px solid @table-border-color;
+                }
+            }
+        }
+        tbody {
+            border: 1px solid @table-border-color;
+
+            td {
+                background-color: @table-tr-bg;
+
+                & + td {
+                    border-left: 1px solid @table-border-color;
+
+                }
+                &:hover {
+                    background-color: @table-tr-hover-bg;
+                }
+            }
+            tr + tr {
+                border-top: 1px solid @table-border-color;
+            }
+        }
+        &.striped {
+
+            tbody tr {
+
+                &:nth-child(odd) td {
+                    background-color: @table-tr-odd-bg;
+                }
+                tr:hover td {
+                    background-color: @table-tr-hover-bg;
+                }
+            }
+        }
+    }
+    &-scroll {
+        > .table-header {
+            background-color: @table-thead-bg;
+
+            li + li {
+                border-left: 1px solid @table-border-color; 
+            }
+        }
+    }
+
+} 
+

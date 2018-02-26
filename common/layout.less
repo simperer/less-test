@@ -1,0 +1,476 @@
+/*
+ * @Description: Layout 布局样式
+ * @Update: 2018-01-31 
+ */
+
+
+/*******************************
+      main-nav 左侧导航栏
+*******************************/
+.main-nav {
+    position: absolute;
+    height: 100%;
+    width: 40px;
+    text-align: center;
+    z-index: 1000;
+    left: 0;
+
+    .nav-logo {
+        width: 100%;
+        height: 50px;
+        float: left;
+        padding: 15px 0;
+        font-size: 20px;
+        overflow: hidden;
+
+        .nav-logo__name {
+            display: none;
+            float: left;
+            width: 70px;
+            height: 20px;
+            margin-top: -20px;
+            font-size: 60px;
+        }
+    }
+    .nav-list {
+        float: left;
+        width: 100%;
+        overflow-y: auto;
+        position: relative;
+        
+        &::-webkit-scrollbar {
+            width: 2px;
+        }
+        .nav-list__item {
+            width: 100%;
+            height: 40px;
+
+            .module {
+                display: block;
+                font-size: 16px;
+                float: left;
+                padding: 12px;
+                position: relative;
+                cursor: pointer;
+                width: 100%;
+                height: 40px;
+            }
+            .module__name {
+                display: none;
+                margin-top: 5px;
+                font-size: 12px;
+            }
+
+        }
+    }
+    .nav-splitline {
+        float: left;
+        width: 20px;
+        margin: 10px;
+        padding-top: 10px;
+
+        .nav-splitline__icon {
+            padding: 3px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    }
+    .nav-info {
+        position: absolute;
+        bottom: 10px;
+        width: 100%;
+
+        .nav-info__item {
+            padding: 10px 0;
+
+            i {
+                font-size: 14px;
+                cursor: pointer;
+            }
+            &.personal-center {
+                cursor: pointer;
+                border: 1px solid transparent;
+
+                &.active {
+                    background-color: #fbfbfb;
+                    margin-right: -1px;
+                    border-right: none;
+                }
+                .avatar {
+                    width: 20px;
+                    height: 20px;
+                    box-shadow: 0 0 1px 0 #fff;
+                    border-radius: 14px;
+                    margin: 0 auto;
+
+                    img {
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
+            }
+        }
+    }
+    .nav-shadow {
+        display: none;
+        width: 5px;
+        height: 100%;
+        position: absolute;
+        right: -5px;
+        top: 0;
+    }
+
+}
+
+.expand-nav-view {
+    .main-nav {
+        width: 70px;
+
+        .nav-logo {
+            height: 70px;
+            font-size: 25px;
+
+            .nav-logo__name {
+                display: block;
+            }
+        }
+        .nav-list {
+            .nav-list__item {
+                height: 60px;
+
+                .module {
+                    height: 60px;
+                    padding: 12px 10px;
+
+                    .module__name {
+                        display: block;
+                        white-space: nowrap;
+                        overflow: hidden;
+                    }
+                }
+
+            }
+        }
+        .nav-splitline {
+            margin: 10px 25px;
+        }
+    }  
+}
+
+.float-nav-view {
+    .main-nav {
+        left: -40px;
+        box-shadow: 0 0 6px rgba(0, 0, 0, 0.5);
+    }
+    &.expand-nav-view .main-nav {
+        left: -70px;
+    }
+    &.float-nav-show .main-nav {
+        left: 0px;
+    }
+    &.float-nav-lock .main-nav {
+        left: 0px;
+    }
+    .nav-shadow {
+        display: block;
+    }
+}
+
+.transition-nav-view  .main-nav, 
+.transition-nav-view  .main-content {
+	transition: 0.3s ease-in;
+}
+
+/*******************************
+      main-content 
+*******************************/
+.main-content {
+    left: 40px;
+    position: absolute;
+    z-index: 10;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    overflow-x: auto;
+    overflow-y: hidden;
+
+    > div,
+    > iframe {
+        position: relative;
+        min-width: 1240px;
+    }
+
+
+}
+.expand-nav-view {
+    .main-content {
+        left: 70px;
+    }
+    .main-content > div,
+    .main-content > iframe {
+        min-width: 1210px;
+    }
+}
+.float-nav-view {
+    .main-content {
+        left: 0;
+    }
+}
+
+/*******************************
+      sidebar 侧边栏
+*******************************/
+.sidebar {
+    width: 221px;
+    position: absolute;
+    z-index: 1000;
+    top: 0px;
+    left: 0;
+    height: 100%;
+
+    .create-block {
+        height: 50px;
+        padding-left: 16px;
+        position: relative;
+        padding-top: 10px;
+        z-index: 10;
+        font-size: 12px;
+
+        > p {
+            line-height: 32px;
+            font-weight: bold;
+            display: inline-block;
+            float: left;
+            margin: 0;
+            font-size: 14px;
+        }
+        > div {
+            right: 12px;
+            top: 15px;
+            position: absolute;
+        }
+        .mat-icon-wrap {
+            width: 24px;
+            height: 24px;
+            line-height: 24px;
+            text-align: center;
+            display: inline-block;
+            vertical-align: middle;
+        }
+        .ygmat-plus {
+            margin-top: 0;
+        }
+        &.multi-view {
+            padding: 15px 16px 0;
+
+            > p {
+                width: 50%;
+                height: 35px;
+                text-align: center;
+
+                span {
+                    cursor: pointer;
+                }
+                &.active span {
+                    border-bottom: 3px solid transparent;
+                }
+                
+            }
+        }
+    }
+    .project-list{
+        padding-left: 5px;
+    }
+}
+
+.content-container {
+    position: relative;
+    height: 100%;
+
+    .content-panel {
+        position: relative;
+        height: 100%;
+    
+        .content-header {
+            height: 50px;
+            line-height: 50px;
+            padding-left: 30px;
+            position: relative;
+            z-index: 999;
+
+            .content-title {
+                font-size: 18px;
+                display: inline-block;
+            }
+            .content-operate {
+                font-size: 12px;
+                display: inline-block;
+                float: right;
+
+                > ul > li {
+                    display: inline-block;
+                    padding: 0 20px;
+                    height: 50px;
+                    line-height: 50px;
+                    float: left;
+                    cursor: pointer;
+                }
+                .mat-icon {
+                    font-size: 20px;
+                    width: 20px;
+                    height: 20px;
+                    margin-top: 0px;
+                }
+            }
+            .content-buttons {
+                font-size: 12px;
+                display: inline-block;
+                float: right;
+                margin-right: 30px;
+
+                .button-item {
+                    margin-left:10px;
+                    width: 100px;
+                    height: 30px;
+                    line-height: 30px;
+                    border-radius: 5px;
+                    cursor: pointer;
+                    text-align: center;
+                    display: inline-block;
+                }
+            }
+            .content-input {
+                float: right;
+                position: relative;
+                margin-right: 30px;
+
+                input {
+                    padding-left: 20px;
+                }
+                i {
+                    position: absolute;
+                    left: 0;
+                    top: 19px;
+                }
+            }
+        }
+        .content-main {
+            position: absolute;
+            overflow-y: auto;
+            overflow-x: hidden;
+            top: 50px;
+            bottom: 0;
+            left: 0;
+            right: 0;
+        }
+    }
+
+}
+
+.view-header {
+    position: absolute;
+    z-index: 200;
+    top: 0px;
+    width: 100%;
+    height: 50px;
+
+    .view-header-seperate-line {
+        position: absolute;
+        top: 18px;
+        left: 100px;
+        width: 1px;
+        height: 16px;
+    }
+    h2 {
+        font-family: "Open Sans", Arial, sans-serif;
+        font-size: 18px;
+        font-weight: 400;
+        margin-left: 24px;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        padding-left: 100px;
+        text-align: left;
+        line-height: 50px;
+    }
+    .back-btn {
+        position: absolute;
+        top: 0;
+        left: 0;
+        text-align: left;
+        padding: 15px 24px;
+        font-size: 14px;
+        cursor: pointer;
+    }
+    a > .mat-icon {
+        margin-right: 3px;
+    }
+    .btn-layer {
+        font-style: normal;
+        position: absolute;
+        top: 0;
+        right: 24px;
+        width: auto;
+        height: 48px;
+
+        a {
+            display: inline-block;
+            padding: 0 16px;
+            cursor: pointer;
+            line-height: 50px;
+            font-size: 14px;
+        }
+        .save-btn i{
+            margin-right: 4px;
+            font-size: 15px;
+        }
+        .mat-icon {
+            opacity: 1;
+        }
+
+    }
+}
+.view-content {
+    height: 100%;
+    overflow-y: auto;
+    padding-top: 50px;
+    overflow-x: hidden;
+
+    &.has-view-footer {
+        padding-bottom: 64px;
+    }
+}
+.view-footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 1000;
+    width: 100%;
+    height: 64px;
+
+    .button-group {
+        max-width: 960px;
+        margin: 0 auto;
+
+        .next-step,
+        .pre-step {
+            float: right;
+            width: 92px;
+            height: 32px;
+            line-height: 32px;
+            margin: 16px 0;
+            font-size: 14px;
+            text-align: center;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .pre-step {
+            margin: 16px 32px 16px 0;
+
+            &:hover {
+                text-decoration: none;
+            }
+        }
+    }
+
+}

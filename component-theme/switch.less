@@ -1,0 +1,20 @@
+@switch-prefix-cls: ~"@{css-prefix}switch";
+
+
+.@{theme-name} .@{switch-prefix-cls} {
+    label {
+        background-color: @switch-bg ;
+        border:1px solid @switch-border-color;
+
+        &:after {
+            background-color: @switch-after-bg;
+        }
+    }
+    input:checked + label {
+        background-color: @switch-checked-bg;
+        border:1px solid @switch-border-color;
+    }
+    input:checked + label:after {
+        background-color: @switch-checked-after-bg;
+    }
+}

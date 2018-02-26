@@ -1,0 +1,47 @@
+.popover {
+    border: none;
+    border-radius: 0px;
+}
+.popover-title {
+    font-size: 12px;
+    padding: 6px 14px;
+    border-bottom: none;
+    background: none;
+}
+.popover-content {
+    padding: 0px 14px;
+}
+
+.@{theme-name} .popover {
+    color: @popover-color;
+    background-color: @popover-bg;
+
+    &.top>.arrow {
+        border-top-color: @popover-arrow-outer-color;
+
+        &:after {
+            border-top-color: @popover-arrow-color;
+        }
+    }
+    &.right>.arrow {
+        border-right-color: @popover-arrow-outer-color;
+
+        &:after {
+            border-top-color: @popover-arrow-color;
+        }
+    }
+    &.bottom>.arrow {
+        border-bottom-color: @popover-arrow-outer-color;
+
+        &:after {
+            border-bottom-color: @popover-arrow-color;
+        }
+    }
+    &.left>.arrow {
+        border-left-color: @popover-arrow-outer-color;
+
+        &:after {
+            border-left-color: @popover-arrow-color;
+        }
+    }
+}

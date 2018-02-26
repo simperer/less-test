@@ -1,0 +1,25 @@
+@btn-prefix-cls: ~"@{css-prefix}btn";
+
+.@{btn-prefix-cls} {
+    .btn();
+
+}
+
+
+.@{theme-name} .@{btn-prefix-cls} {
+
+
+    &-default {
+        .btn-default();
+    }
+    &-func {
+        .btn-func();
+    }
+    &-dashed {
+        .btn-dashed();
+    }
+    &-text {
+        .btn-text();
+    }
+
+}

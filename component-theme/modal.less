@@ -1,0 +1,32 @@
+
+.@{theme-name} {
+    .modal-header {
+        background-color: @modal-header-bg;
+        border-bottom: 1px solid @modal-header-border-bottom-color;
+        
+        .close {
+            color: @modal-header-close-color;
+        }
+        .modal-title {
+            color: @modal-header-title-color !important;
+        }
+    }
+    .modal-body {
+        background-color: @modal-body-bg !important;
+    }
+    .modal-footer {
+        background-color: @modal-footer-bg !important;
+        
+        .btn {
+            color: @modal-footer-btn-color !important;
+
+            &.active {
+                color: @modal-footer-btn-active-color !important;
+            }
+        }
+    }
+    .modal-dialog.max .modal-content {
+        background-color: @modal-max-bg;
+    }
+
+}

@@ -1,0 +1,11 @@
+@ripple-prefix-cls: ~"@{css-prefix}ripple";
+
+
+.@{theme-name} .@{ripple-prefix-cls} {
+    
+    &:after {
+        background-image: radial-gradient(circle,@ripple-bg 10%,transparent 10.01%);
+    }
+}
+
+

@@ -1,0 +1,97 @@
+/**  nestable theme css **/
+.@{theme-name} .fold-tree {
+
+    &::-webkit-scrollbar-thumb {
+        background-color: @nestable-scrollbar-bg;
+    }
+    .dd-list {
+
+        .dd-item {
+
+            > button {
+                color: @nestable-icon-color;
+    
+                &:hover ~ .dd-handle {
+                    background: @nestable-hover-bg;
+                }
+            }
+            > .dd-handle {
+                color: @nestable-icon-color;
+    
+                &:hover {
+                    background: @nestable-hover-bg;
+                }
+                .menu-name{
+                    color: @nestable-name-color;
+                }
+                .tag-icon {
+                    color: @nestable-tag-color;
+                    background: @nestable-tag-bg;
+                }
+                .action-buttons {
+    
+                    > a{
+                        //color: #a6eae5;
+                        color: @nestable-action-btn-color;
+    
+                        &:hover{
+                            color: @nestable-action-btn-hover-color;
+                        }
+                    }
+                    .menu-delete-btn:hover{
+                        color:#d91603;
+                    }
+                }
+            }
+            &.selected {
+
+                > button {
+                    color: @nestable-selected-icon-color;
+                }
+                > .dd-handle {
+                    color: @nestable-selected-icon-color;
+                    background: @nestable-selected-bg;
+        
+                    .menu-name{
+                        color: @nestable-selected-name-color;
+                    }
+                    .tag-icon {
+                        color: @nestable-selected-tag-color;
+                        background: @nestable-selected-tag-bg;
+                    }
+                    .action-buttons {
+    
+                        > a{
+                            color: @nestable-selected-action-btn-color;
+        
+                            &:hover{
+                                color: @nestable-selected-action-btn-hover-color;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .dd-item-edit > .dd-handle .menu-name{
+            border-bottom: 1px solid @nestable-edit-border-color !important;
+        }
+        .error .menu-name{
+            border: 1px solid rgba(156, 40, 15, 0.59);
+        }
+    }
+    .dd-placeholder,
+    .dd-empty {
+        border: 1px dashed @nestable-empty-border-color;
+    }
+    .dd-dragel > li > .dd-handle {
+        color: @nestable-dragel-color;
+        border-color: @nestable-dragel-border-color;
+    }
+    .fold-tree-tip{
+        color: @nestable-tip-color;
+        background: @nestable-tip-bg;
+        border: 1px solid @nestable-tip-border-color;
+    }
+
+}
+

@@ -1,0 +1,17 @@
+@tabs-prefix-cls: ~"@{css-prefix}tabs";
+
+.@{theme-name} .tab,
+.@{theme-name} .@{tabs-prefix-cls} {
+    &-header {
+        li {
+            &.active > a {
+                color: @tab-active-color;
+            }
+            > a {
+                color: @tab-color;
+                border-left-color: @tab-border-color;
+            }
+        }
+    }
+}
+

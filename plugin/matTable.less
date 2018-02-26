@@ -1,0 +1,26 @@
+/* matTable theme css */
+.@{theme-name} .mat-table {
+    .table-header {
+        background: @table-thead-bg;
+
+        li {
+            background: @table-thead-bg;
+            border-left-color: @matTable-thead-border-color;
+
+            &.new {
+                background-color: @matTable-thead-new-field-bg;
+            }
+        }
+    }
+    .preview-select-type,
+    .ico-more-list {
+        background-color: @dropdown-bg;
+        box-shadow: @dropdown-shadow;
+    
+        p:hover {
+            color: @dropdown-item-hover-color;
+            background: @dropdown-item-hover-bg;
+        }
+    }
+} 
+

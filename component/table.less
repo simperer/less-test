@@ -1,0 +1,113 @@
+@table-prefix-cls: ~"@{css-prefix}table";
+
+.@{table-prefix-cls} {
+    &-normal {
+        th,
+        td {
+            padding: 8px 16px;
+            line-height: 16px;
+            height: 32px;
+        }
+        th {
+            font-weight: normal;
+        }
+    }
+    &-scroll {
+        > .table-header {
+            position: relative;
+            z-index: 8;
+            height: 32px;
+            white-space: nowrap;
+
+            li {
+                position: relative;
+                float: left;
+                height: 32px;
+                line-height: 32px;
+                padding: 0 16px;
+
+                .sort-arrow {
+                    display: none;
+                    margin-top: 2px;
+                }
+                .sort-arrow-active {
+                    display: inline-block;
+                }
+                &:hover {
+                    .sort-arrow {
+                        display: inline-block;
+                    }
+                }
+            }
+        }
+        > .table-body {
+            max-height: calc(~"100% - 34px");
+            overflow-y: auto;
+
+            table {
+                margin-top: -31px;
+                table-layout: fixed;
+            }
+        }
+
+    }
+}
+
+.@{theme-name} .@{table-prefix-cls} {
+    &-normal {
+        color: @table-color;
+
+        thead {
+            //border: 1px solid #eceff1;
+            th {
+                background-color: @table-thead-bg;
+                border-bottom: 2px solid @table-thead-border-bottom-color;
+            
+                & + th {
+                    border-left: 1px solid @table-border-color;
+                }
+            }
+        }
+        tbody {
+            border: 1px solid @table-border-color;
+
+            td {
+                background-color: @table-tr-bg;
+
+                & + td {
+                    border-left: 1px solid @table-border-color;
+
+                }
+                &:hover {
+                    background-color: @table-tr-hover-bg;
+                }
+            }
+            tr + tr {
+                border-top: 1px solid @table-border-color;
+            }
+        }
+        &.striped {
+
+            tbody tr {
+
+                &:nth-child(odd) td {
+                    background-color: @table-tr-odd-bg;
+                }
+                tr:hover td {
+                    background-color: @table-tr-hover-bg;
+                }
+            }
+        }
+    }
+    &-scroll {
+        > .table-header {
+            background-color: @table-thead-bg;
+
+            li + li {
+                border-left: 1px solid @table-border-color; 
+            }
+        }
+    }
+
+} 
+

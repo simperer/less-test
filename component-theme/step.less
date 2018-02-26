@@ -1,0 +1,46 @@
+@step-prefix-cls: ~"@{css-prefix}step";
+
+
+.@{theme-name} .@{step-prefix-cls} {
+    .line-bg {
+        background-color: @step-line-bg;
+
+        .progress-line {
+            background-color: @step-line-color;
+        }
+    }
+    ul li {
+        .circle-bg {
+            background-color: @step-circle-bg;
+            background-image: url("@{img-path}@{step-img-name}.png");
+        }
+        &.active {
+            .circle-bg {
+                color: @step-active-num-color;
+            }
+            p {
+                color: @step-active-title-color;
+            }
+        }
+        &.undone {
+            .circle-bg {
+                color: @step-undone-num-color;
+            }
+            p {
+                color: @step-undone-title-color;
+            }
+        }
+        &.done {
+            .circle-bg {
+                color: @step-done-num-color;
+            }
+            p{
+                color: @step-done-title-color;
+            }
+        }
+    }
+} 
+
+
+
+

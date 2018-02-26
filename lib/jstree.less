@@ -1,0 +1,50 @@
+/**  jstree theme css  **/
+.@{theme-name} .jstree-default {
+
+    .jstree-wholerow-hovered {
+        background-color: @jstree-default-hover-bg;
+    }
+    .jstree-wholerow-clicked {
+        background: @jstree-default-click-bg;
+    }
+    .jstree-closed > .jstree-ocl,
+    .jstree-open > .jstree-ocl {
+        color: @jstree-default-ocl-color;
+    }
+
+    &.tree-container {
+        //border: none;
+        //color: #c0d5eb;
+        background: @jstree-select-bg;
+        box-shadow: @jstree-select-shadow;
+    }
+    &.project-list {
+        color: @jstree-sidebar-color; 
+        background-color: @jstree-sidebar-bg;
+
+        &::-webkit-scrollbar-thumb {
+            background-color: @jstree-sidebar-scrollbar-bg;
+        }
+        .jstree-icon {
+            color: @jstree-sidebar-icon-color;
+        }
+        .jstree-wholerow-hovered {
+            background-color: @jstree-sidebar-hover-bg;
+        }
+        .jstree-wholerow-clicked {
+            background: @jstree-sidebar-click-bg;
+        }
+        .jstree-clicked {
+            color: @jstree-sidebar-click-color;
+
+            .jstree-icon  {
+                color: @jstree-sidebar-click-icon-color;
+            }
+        }
+        &.jstree-page .jstree-wholerow-clicked {
+            background: @jstree-sidebar-page-click-bg;
+        }
+
+    }
+
+}

@@ -1,0 +1,64 @@
+/* datasourceInfo @{theme-name} css */
+.@{theme-name} .datasourceInfo-template {
+    .has-add {
+        background-color: @btn-disabled-bg;
+        color: @btn-disabled-color;
+    }
+    .upload-icon {
+        background-color: @base-color;
+        color: #fff;
+    }
+    .ds-photos__list__item {
+        box-shadow: 0 0 0 8px @grounding-block-bg;
+
+        &.add-photo {
+            border: 1px solid @border-color-base;
+        }
+        .delete-photo {
+            color: @delete-btn-color;
+            background-color: @delete-btn-bg;
+        }
+    }
+    .dataPreview-block__sidebar {
+        background-color: @table-thead-bg;
+    }
+    .dataPreview-block__content {
+        background-color: @box-bg;
+
+        .tab-header {
+            border-bottom: 1px solid @border-color-split;
+        }
+    }
+    .dataPreview-list__item.active {
+        background-color: @box-bg;
+        box-shadow: 4px 0 0 @base-color inset;
+
+        .table-name {
+            //color: @text-color;
+        }
+    }
+    .tab-relation-list .block-bd {
+        //background-color: @box-bg;
+    }
+    .relation-empty {
+        //background-color: @box-bg;
+    }
+    .ds-labels__item {
+        color: @base-color;
+        border-color: @base-color;
+
+        > .delete-btn {
+            color: @delete-btn-color;
+            background-color: @delete-btn-bg;
+        }
+    }
+    .ds-labels__action .check-ok {
+        color: #fff;
+        background-color: @base-color;
+    }
+    .slide-handle {
+        border-color: @grounding-slide-border-color;
+        background-color: @grounding-slide-bg;
+    }
+}
+

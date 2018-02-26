@@ -1,0 +1,49 @@
+/* relationSelect theme css */
+.@{theme-name} .relationSelect {
+	.tree-pane {
+		background-color: darken(@box-bg,2%);
+	}
+	.jstree-default .jstree-wholerow-clicked {
+		background-color: @relationSelect-jstree-click-color;
+	}
+	.jstree-clicked {
+		color: #fff;
+	}
+	.left-box,
+	.right-box {
+		border: 1px solid @border-color-base;
+	}
+	.folder-box {
+		border-left: 1px solid @border-color-base;
+	}
+
+	.folder-container .folder-list .folder-item>p.active {
+		//background: #FFF;
+		//color: @base-color;
+	}
+	.folder-container .folder-list .folder-item:hover {
+	//.selected-container .selected-list .selected-item:hover {
+		background-color: @dropdown-item-hover-bg;
+	}
+	.box-header {
+		background-color: @table-thead-bg;
+	}
+	.box-footer {
+		border-top: 1px solid @border-color-base;
+
+		a {
+			color: @base-color;
+
+			&:hover {
+				color: fadeout(@base-color,40%);
+			}
+		}
+	}
+	.selected-remove {
+		color: @base-color;
+
+		&:hover {
+			color: fadeout(@base-color,40%);
+		}
+	}
+} 

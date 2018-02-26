@@ -1,0 +1,47 @@
+@tabs-prefix-cls: ~"@{css-prefix}tabs";
+
+.tab,
+.@{tabs-prefix-cls} {
+    &-header {
+        height: 40px;
+        > li {
+            float: left;
+            height: 40px;
+            line-height: 40px;
+            font-size: 12px;
+            cursor: pointer;
+
+            > a {
+                padding: 0 30px;
+            }
+            &:first-child > a {
+                padding-left: 0;
+            }
+            & + li > a {
+                border-left: 1px solid transparent;
+            }
+            &.active {
+                font-weight: 600;
+            }
+        }
+    }
+    &-content {
+
+    }
+}
+
+.@{theme-name} .tab,
+.@{theme-name} .@{tabs-prefix-cls} {
+    &-header {
+        li {
+            &.active > a {
+                color: @tab-active-color;
+            }
+            > a {
+                color: @tab-color;
+                border-left-color: @tab-border-color;
+            }
+        }
+    }
+}
+

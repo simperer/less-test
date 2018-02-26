@@ -1,0 +1,17 @@
+@label-prefix-cls: ~"@{css-prefix}label";
+
+
+.@{theme-name} .@{label-prefix-cls} {
+    color: @label-color;
+    background-color: @label-bg;
+
+    &:hover {
+        color: @label-hover-color;
+        background-color: @label-hover-bg;
+    }
+    &.active {
+        color: @label-active-color;
+        background-color: @label-active-bg;
+    }
+
+}

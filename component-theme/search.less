@@ -1,0 +1,47 @@
+/*
+ * @Description: 搜索框
+ * @Author: kecuihua 
+ * @Date: 2018-02-07 16:52:49 
+ */
+
+
+// sideSearch 侧边搜索框
+ 
+.@{theme-name} .search-worktable-box {
+
+    i {
+        color: @sider-search-placeholder-color;
+    }
+    .search-worktable-input {
+        .placeholder(@sider-search-placeholder-color);
+    
+        box-shadow: 0 -1px 0 0 @sider-search-ipt-shadow-color inset;
+        color: #fff;
+    
+    }
+    .search-worktable-result {
+        .box-shadow();
+    
+        ul li {
+
+            &:hover {
+                background: @sider-search-result-hover-bg;
+            }
+            .search-table-title,
+            .search-folder-name {
+                color: @sider-search-result-title-color;
+            }
+            .search-table-path {
+                color: @sider-search-result-path-color;
+            }
+        }
+        .search-worktable-result-folder {
+            box-shadow: inset 0 1px 0 0 @sider-search-result-folder-shadow-color;
+        }
+        .search-result-list-num {
+            color: #fff;
+            background: @sider-search-result-num-bg;
+        }
+    }
+}
+

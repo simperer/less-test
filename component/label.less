@@ -1,0 +1,35 @@
+@label-prefix-cls: ~"@{css-prefix}label";
+
+.@{label-prefix-cls} {
+    display: inline-block;
+    padding: 0 16px;
+    //margin-left: 8px;
+    height: 28px;
+    line-height: 28px;
+    min-width: 48px;
+    border: 0;
+    font-size: 12px;
+    text-align: center;
+    cursor: pointer;
+    /*text-transform: uppercase;*/
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+
+}
+
+
+.@{theme-name} .@{label-prefix-cls} {
+    color: @label-color;
+    background-color: @label-bg;
+
+    &:hover {
+        color: @label-hover-color;
+        background-color: @label-hover-bg;
+    }
+    &.active {
+        color: @label-active-color;
+        background-color: @label-active-bg;
+    }
+
+}
